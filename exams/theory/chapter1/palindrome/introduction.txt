@@ -1,0 +1,3 @@
+t1_palindrome/ - contains how to get the digits of a number and also how to verify if the number it's palindrome.
+
+This is a very simple topic, however very popular in the entrance exams. 
