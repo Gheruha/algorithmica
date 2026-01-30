@@ -1,0 +1,39 @@
+Source: https://www.pbinfo.ro/articole/65/cifrele-unui-numar
+Constructing a number with given digits
+Let's consider the following sequence of digits, in order: 2 8 5 3
+
+With them we can construct a number, as follows:
+
+we start from the value R = 0;
+the digits are added in order:
+at the end of R
+at the beginning of R
+If the digits are added at the end, we proceed as follows:
+
+R = 0
+c = 2. R = 10 * R + c, i.e. R becomes 10 * 0 + 2 = 2
+c = 8. R = 10 * R + c, i.e. R becomes 10 * 2 + 8 = 28
+c = 5. R = 10 * R + c, i.e. R becomes 10 * 28 + 5 = 285
+c = 3. R = 10 * R + c, i.e. R becomes 10 * 285 + 3 = 2853
+If the digits are inserted at the beginning, we proceed as follows:
+
+R = 0
+c = 2. R = R + 1 * c, i.e. R becomes 0 + 1 * 2 = 2
+c = 8. R = R + 10 * c, i.e. R becomes 2 + 8 * 10 = 82
+c = 5. R = R + 100 * c, i.e. R becomes 82 + 100 * 5 = 582
+c = 3. R = R + 1000 * c, i.e. R becomes 582 +1000 * 3 = 3582
+Both methods actually use the decimal representation of the number:
+
+3582 = 0 + 1 * 2 + 10 * 8 + 100 * 5 + 1000 * 3
+
+On the other hand:
+
+2853 =
+285 * 10 +3 =
+(28*10 + 5) * 10 +3 =
+((2 * 10 + 8)*10 + 5) * 10 +3 =
+(((0 * 10 + 2) * 10 + 8)*10 + 5) * 10 +3
+
+In practice, numbers with The information that is used to construct a number can come from various sources. A common situation is to construct a number using the digits of another known number.
+
+In the folder exams/pbinfo/chapter1 you'll see solved problems.
