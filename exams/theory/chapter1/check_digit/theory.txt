@@ -1,0 +1,12 @@
+Source: https://www.pbinfo.ro/articole/13257/cifra-de-control-a-unui-numar
+
+The check digit of a number is obtained by adding its digits, then adding the digits of this sum, until the sum obtained is a single-digit number. This last digit is called the check digit.
+
+Example:
+n = 4568258
+cd(4568258) = 38
+cd(38) = 11
+cd(11) = 2
+
+2 is the check number
+
