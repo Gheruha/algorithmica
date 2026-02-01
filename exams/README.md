@@ -20,7 +20,7 @@ This repository is **not** intended for:
 ## Topics inside theory/ folder
 | Chapter | Folder | Topics |
 |---:|---|---|
-| 1 | `chapter1/` | Digits of a number; palindromes |
+| 1 | `chapter1/` | Digits of a number; Palindrome; Building numbers; Finding the 'check digit'  |
 | 2 | `chapter2/` |  |
 | 3 | `chapter3/` |  |
 
