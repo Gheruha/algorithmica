@@ -1,5 +1,4 @@
-/* sorts.cc - here the user can find the most popular sort algorithms
-   implemented and explained through commentaries. */
+/* implemented and explained through commentaries. */
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -8,9 +7,9 @@ using namespace std;
 vector<int> vec = {8, 2, 4, 10, 1, 5, 5, 6, 7};
 
 // Display sorted vector function.
-void display(vector<int> &vec){
+void display(vector<int> &vec) {
   cout << "Sorted vector: [";
-  for (auto i : vec){
+  for (auto i : vec) {
     cout << i << ", ";
   }
   cout << "]\n";
@@ -69,8 +68,8 @@ void mergeSort(vector<int> &vec) {
   merge(leftVec, rightVec, vec);
 }
 
-void sortToExecute(string option){
-  if (option == "-ms"){
+void sortToExecute(string option) {
+  if (option == "-ms") {
     mergeSort(vec);
     display(vec);
   }
