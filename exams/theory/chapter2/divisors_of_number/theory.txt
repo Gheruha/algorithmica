@@ -1,0 +1,4 @@
+Resource: https://www.pbinfo.ro/articole/72/divizorii-unui-numar
+
+We consider than n is dividing m if there is a number p in a way that n * p = m. Very simple -> m % n = 0.
+In (exams/theory/chapter2/divisors_of_number/algorithm.cc) you can see a few methods of finding the divisors. 
