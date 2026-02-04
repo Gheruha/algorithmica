@@ -26,6 +26,10 @@ This repository is **not** intended for:
 - Try solving the problem yourself first.
 - Use the code to compare approaches, not to copy blindly.
 - Pay attention to comments.
+
+## Currently active in ✨
+- `exams/`.
+- `competitive/`.
   
 ## Future plans for this repository:
 - I will mainly work on it as a side project for many years, probably all my software engineer career. I plan to make the contents inside this repository better documented and available.
