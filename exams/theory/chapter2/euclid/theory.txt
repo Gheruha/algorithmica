@@ -1,0 +1,20 @@
+Resource: https://www.pbinfo.ro/articole/73/algoritmul-lui-euclid
+
+WHY READ THIS IF THE RESOURCE ALREADY HAS THE INFO?
+- It is possible for you to have the same or similar thought process as me, I've tried to explain the properties in words that I understand better.
+
+DEFINITION:
+Let (a) and (b) be 2 natural numbers. A natural number (d) is named the greates common divisor of (a) and (b) if:
+    1. d|a and d|b - it is a divisor for a and a divisor for be as well.
+    2. c|a and c|b then c|d - any common divisor of a and b can divide d.
+If gcb(a,b) = 1 we say that they're prime with one another.
+
+PROPERTIES FOR THE GREATEST COMMON DIVISOR [gcb(a,b))]:
+P.S: I will use the notation (a,b) since it's also correct and faster to write. a|b means a is dividing b.
+     I strongly advise you to try all the properties on a piece of paper, adding random numbers. 
+
+We have the following properties:
+  1. ((a,b), c) = (a, (b,c)) if a,b and c are natural numbers. For easier understanding think that in both cases we should find the biggest common divisor that is included in a, b and c. 
+  2. (a,b) = 1, (a,c) = 1 then (a, bc) = 1 - since multiplying b and c will not change the situation, it will still be prime with one another.
+  3. a|bc, (a,b) = 1 then a|c - if a is not dividing b, since a|bc then a is for sure dividing c.
+  4. a|c, b|c and (a,b) = 1 then ab|c - since both could divide c, being prime with one another doesn't mean that multiplied they cannot divide c.
