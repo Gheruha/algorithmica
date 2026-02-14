@@ -3,6 +3,7 @@
 //  2. By multiplication.
 
 #include <iostream>
+#include <vector>
 
 // 1. Euclid's algorithm implemented by substraction.
 int euclid1(int n, int m) {
@@ -26,16 +27,8 @@ int euclid2(int n, int m) {
    * Useful Resource: https://www.youtube.com/watch?v=8cikffEcyPI
    *
      Why is it working: the greatest common divisor of 2 numbers divides the
-     remaining of their divison as well.
+     remaining of their divison as well. */
 
-     A number n is formed of divisors, the divisors have the remain 0 we we
-     divide n to them. However a number n can be formed of divisors and
-     remainings of the division with them. For example 24/9 is formed of 9 and
-     the remainder 6.
-
-     That's why is correct to divide to the remainder.
-     By doing this multiple times we make the remainder smaller and smaller till
-     it reaches 0. When it reaches 0, we stop, thid is the gcd. */
   while (m != 0) {
     int r = n % m;
     n = m;
@@ -45,11 +38,42 @@ int euclid2(int n, int m) {
   return n;
 }
 
+/* 3. Gcd on multiple numbers:
+ *    1. We find the gcd on the first two numbers.
+ *    2. Then we find the gcd between the previous gcd and the third number.
+ *    3. Then we find the gcd between the previoous gcd and the fourth number.
+ *    4. We continue this way.
+ * */
+void euclid_on_multiple_numbers(std::vector<int> numbers) {
+  if (numbers.size() > 0) {
+    for (int i = 0; i < numbers.size() - 1; i++) {
+      int n = numbers[i];
+      int m = numbers[i + 1];
+
+      std::cout << euclid2(n, m) << "\n";
+    }
+  }
+}
+
 int main() {
   int n, m;
   std::cin >> n >> m;
 
   std::cout << euclid1(n, m) << "\n";
-  std::cout << euclid2(n, m);
+  std::cout << euclid2(n, m) << "\n";
+
+  std::cout << "How many elements in the vector: ";
+  int nr, elem;
+  std::cin >> nr;
+
+  std::vector<int> numbers;
+  for (int i = 0; i < nr; i++) {
+    std::cout << "[" << i + 1 << "]: ";
+    std::cin >> elem;
+    numbers.push_back(elem);
+  }
+
+  euclid_on_multiple_numbers(numbers);
+
   return 0;
 }
