@@ -1,0 +1,15 @@
+Resource: https://www.pbinfo.ro/articole/74/numere-prime
+
+Definitions:
+  A natural number p > 1 is prime if:
+    - p|ab => p|a or p|b.
+    - d|p => d=1 or d=p.
+
+Observations:
+  - 0,1 are not considered prime.
+  - If the only divisors of n are 1 and himself then he's prime. 
+
+Verifying if a number is prime: 
+  - We can count his divisors, if the the sum of divisors(how many) are 2, then n is prime.
+  - We can sum the divisors, if their sum is n + 1, then n is prime.
+  - We can search the divisors different from the the number itself or 1, if we don't find, the number is prime.
