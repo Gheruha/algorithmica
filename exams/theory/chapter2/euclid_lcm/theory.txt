@@ -1,0 +1,11 @@
+Resource: https://www.pbinfo.ro/articole/73/algoritmul-lui-euclid
+Notation: lcm - (least common multiple)\
+
+Example: let a = 12, b = 18.
+  Multiples of 12: {12, 24, 36, 48, ...}.
+  Multiples of 18: {18, 36, 54, ...}.
+  lcm(12,18) = 36.
+
+The most important thing to understand:
+  - The product of 2 natural numbers a and b is equal to their gcd times their lcm.
+  - a * b = gcd(a,b) * lcm(12,18).
