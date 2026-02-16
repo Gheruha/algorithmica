@@ -1,0 +1,6 @@
+Resource: https://www.pbinfo.ro/articole/75/descompunerea-in-factori-primi
+
+Any natural number n > 1 can be written as p1^e1 * p2^e2 ... pk^ek where e^i > 0 and i = 1 ... k;
+
+Example:
+  12 = 2^2 * 3^1.
