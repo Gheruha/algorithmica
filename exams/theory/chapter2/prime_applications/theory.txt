@@ -3,7 +3,7 @@ Resource: https://www.pbinfo.ro/articole/67/aplicatii-ale-descompunerii-in-facto
 To find how many divisors a number has we can try each number from the possible divisors interval and see which ones are correct.
 Since we know about prime numbers and prime factorization we can use a better way to find how many divisors a number has:
 
-Prime factorization application 1:
+Prime factorization application 1 (How many divisors does n have):
 e - exponent
 
 Formula: (e1 + 1) * (e2 + 2) * ... * (ek + 1) = nr of possible divisors of n.
@@ -17,3 +17,13 @@ Example:
   b can be 0 or 1 
 
   So the nr of possible divisors of 12 is (2 + 1) * (1 + 1) = 3 * 2 = [6] - Correct.
+
+----------
+Prime factorization application 2 (The sum of n's divisors):
+
+To find the sum of n's divisors we can use the sigma function.
+In order to be able to prove the sigma function you need to know geometric series and sequences first.
+
+Resources:
+  - Proof for sigma function: https://www.youtube.com/watch?v=6Yl8-61B__Y
+  - Geometric sequences & series: https://www.youtube.com/watch?v=zRKZ0-kOUZM
