@@ -21,7 +21,7 @@ int euclid1(int n, int m) {
   return n;
 }
 
-// 2. Euclid's algorithm implemented by multiplication;
+// 2. Euclid's algorithm implemented by divisions;
 int euclid2(int n, int m) {
   /* Intuition:
    * Useful Resource: https://www.youtube.com/watch?v=8cikffEcyPI
