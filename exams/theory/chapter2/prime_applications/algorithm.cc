@@ -54,12 +54,40 @@ int application2(int n) {
   return sum;
 }
 
+// Finding all the numbers less or equal to n that are also prime with n.
+// phi(n) = {k is 1,2,3...n} | gcd(k,n) = 1
+int application3(int n) {
+  int d = 2;
+  int phi = 1;
+
+  while (n > 1) {
+    if (n % d == 0) {
+
+      int p = 0;
+      while (n % d == 0) {
+        p++;
+        n /= d;
+      }
+
+      phi *= (d - 1) * pow(d, p - 1);
+    }
+    d++;
+
+    if (n > 1 && d * d > n) {
+      d = n;
+    }
+  }
+
+  return phi;
+}
+
 int main() {
   int n;
   std::cin >> n;
 
   std::cout << "Number of n's divisors:  " << application1(n) << "\n";
   std::cout << "Sum of n's divisors: " << application2(n) << "\n";
+  std::cout << "Phi(n): " << application3(n) << "\n";
 
   return 0;
 }

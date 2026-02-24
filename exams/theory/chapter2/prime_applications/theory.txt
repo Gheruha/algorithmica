@@ -27,3 +27,8 @@ In order to be able to prove the sigma function you need to know geometric serie
 Resources:
   - Proof for sigma function: https://www.youtube.com/watch?v=6Yl8-61B__Y
   - Geometric sequences & series: https://www.youtube.com/watch?v=zRKZ0-kOUZM
+
+----------
+Prime factorization application 3 (Euler's indicator)
+
+It uses prime factorization to find all the numbers less or equal to n that ar also prime with n.
