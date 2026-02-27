@@ -1,0 +1,15 @@
+Resource: https://www.pbinfo.ro/articole/5562/baze-de-numeratie
+
+To transform a number n with base 10 in a number with base b we do the following algorithm:
+  1. Divide number n to b, obtaining quotient and remainder of a number.
+  2. We divide the quotient of n with b multiple times until the quotient becomes 0. 
+  3. We write the remainders in revers order - this is our number with base b now. 
+
+Example:
+  12(10) -> result(2);
+  - 12 / 2 = 6, remainder 0.
+  - 6 / 2 = 3, remainder 0.
+  - 3 / 2 = 1, remainder 1.
+  - 1 / 2 = 0, remainder 1.
+
+  12(10) -> 1100(2).
