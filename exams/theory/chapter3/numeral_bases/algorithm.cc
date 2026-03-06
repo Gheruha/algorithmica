@@ -26,6 +26,26 @@ int algorithm2(int n, int b) {
   return res;
 }
 
+// Fast exponentiation algorithm O(log_n).
+// This algorithm relies on thinking about the exponent as a sum of distinct
+// powers of 2. Because we can write each number as a sum of distinct powers
+// of 2.
+// More about it:
+// https://www.pbinfo.ro/articole/25706/Inmultirea-a-la-russe-si-ridicarea-la-putere-rapida
+long long algorithm3(int A, int e) {
+  long long P = 1;
+  while (e != 0) {
+    int remainder = e % 2;
+    if (remainder == 1)
+      P *= A;
+
+    e /= 2;
+    A *= A;
+  }
+
+  return P;
+}
+
 int main() {
   int n, b;
   std::cout << "Write a number in base 10 and a random base: ";
@@ -41,5 +61,11 @@ int main() {
 
   std::cout << "The number you wrote in base " << b
             << " convert to base 10 is: " << res;
+
+  std::cout << "Enter base and exponent:";
+  int A, e;
+  std::cin >> A >> e;
+  std::cout << algorithm3(A, e);
+
   return 0;
 }
