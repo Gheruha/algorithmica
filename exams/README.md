@@ -23,6 +23,7 @@ This repository is **not** intended for:
 | 1 | `chapter1/` | Digits of a number; Palindrome; Building numbers; Finding the 'check digit'  |
 | 2 | `chapter2/` | Determining common divisors; GCD & LCM; Euclid's Algorithm; Primality check; Prime factorization; Legendre's algorithm |
 | 3 | `chapter3/` | Convert from base 10 to base b; Convert from base b to base 10; Fast exponentiation |
+| 4 | `chapter4/` | Fibonacci numbers iterative; Fibonacci numbers recursive |
 
 ## How to use this folder
 - Read the problem statement before opening a solution.
