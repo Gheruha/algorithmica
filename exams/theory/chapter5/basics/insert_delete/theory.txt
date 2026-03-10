@@ -1,0 +1,8 @@
+Resource: https://www.pbinfo.ro/articole/5584/stergeri-si-inserari-de-elemente
+
+Delete:
+  - To delete an element from the array we simply move the indices p+1, p+2, p+3 ... n - 1 to left by one position.
+
+Insert:
+  - Similar to delete, but this time we move the indices to the right by one position.
+
