@@ -1,0 +1,6 @@
+Inneficient sorting algorithms O(n^2): 
+
+* Bubble sort:
+  - We travel the vector, if there are 2 neighbor elements that are not in the correct order, we exchange them.
+  - After one travel, not all the elements will be sorted, however we can do that as many times needed till there is nothing to exchange. 
+
