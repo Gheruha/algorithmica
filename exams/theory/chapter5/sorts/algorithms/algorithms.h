@@ -8,5 +8,7 @@ struct ArrayResult {
 
 void display(ArrayResult result, int n);
 ArrayResult bubble_sort(const int src[], int n);
+ArrayResult selection_sort(const int src[], int n);
+ArrayResult insertion_sort(const int src[], int n);
 
 #endif

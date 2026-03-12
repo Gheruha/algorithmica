@@ -4,3 +4,8 @@ Inneficient sorting algorithms O(n^2):
   - We travel the vector, if there are 2 neighbor elements that are not in the correct order, we exchange them.
   - After one travel, not all the elements will be sorted, however we can do that as many times needed till there is nothing to exchange. 
 
+* Select sort:
+  - We take array[0].
+  - We search travel the vector and take the minimum. 
+  - We swap array[0] with the minimum.
+  - Same steps but with array[1,2,...n - 1].
