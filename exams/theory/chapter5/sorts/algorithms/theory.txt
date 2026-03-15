@@ -9,3 +9,10 @@ Inneficient sorting algorithms O(n^2):
   - We search travel the vector and take the minimum. 
   - We swap array[0] with the minimum.
   - Same steps but with array[1,2,...n - 1].
+
+* Insertion sort:
+  - let's say a vector X[] with n elements;
+  - if the sequence with indices 0, 1, ... i-1 is ordered, then we can insert the element array[i] in this sequence so that the sequence with 
+    indices 0, 1, ..., i-1, i is ordered
+  - we take each element array[i] in turn and insert it into the sequence to its left
+  - at the end the whole array will be ordered 

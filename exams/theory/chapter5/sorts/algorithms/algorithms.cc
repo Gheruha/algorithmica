@@ -58,3 +58,25 @@ ArrayResult selection_sort(const int src[], int n) {
 
   return result;
 }
+
+ArrayResult insertion_sort(const int src[], int n) {
+  // Copy of original raw array
+  ArrayResult result;
+  result.n = n;
+  for (int i = 0; i < n; i++) {
+    result.v[i] = src[i];
+  }
+
+  for (int i = 1; i < n; i++) {
+
+    int p = i;
+    while (p > 0 && result.v[p] < result.v[p - 1]) {
+      int aux = result.v[p];
+      result.v[p] = result.v[p - 1];
+      result.v[p - 1] = aux;
+      p--;
+    }
+  }
+
+  return result;
+}
