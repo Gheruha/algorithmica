@@ -1,0 +1,16 @@
+Resource: https://www.cs.ubbcluj.ro/wp-content/uploads/Probleme-si-teste-pregatitoare-admitere-Informatica.pdf 
+Problem 56 — Longest palindromic substring
+
+Algorithm A:
+1. We iterate through all positions i from 1 to n.
+2. For each position i, we consider two possible palindrome centers:
+   - (i, i) for odd-length palindromes
+   - (i, i + 1) for even-length palindromes
+3. For each center, we expand to the left and right while the characters are equal.
+4. When the expansion stops, the pointers have already gone one step outside the palindrome, so the palindrome length is r - l - 1.
+5. We compute:
+   - len1 = length of the palindrome centered at (i, i)
+   - len2 = length of the palindrome centered at (i, i + 1)
+6. We keep the maximum of all lengths found.
+7. The algorithm returns the length of the longest palindromic substring.
+
