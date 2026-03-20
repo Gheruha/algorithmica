@@ -11,8 +11,19 @@ Inneficient sorting algorithms O(n^2):
   - Same steps but with array[1,2,...n - 1].
 
 * Insertion sort:
-  - let's say a vector X[] with n elements;
+  - let's say a vector X[] with n elements.
   - if the sequence with indices 0, 1, ... i-1 is ordered, then we can insert the element array[i] in this sequence so that the sequence with 
-    indices 0, 1, ..., i-1, i is ordered
-  - we take each element array[i] in turn and insert it into the sequence to its left
-  - at the end the whole array will be ordered 
+    indices 0, 1, ..., i-1, i is ordered.
+  - we take each element array[i] in turn and insert it into the sequence to its left.
+  - at the end the whole array will be ordered.
+
+
+* Collating or 'Interclasare' in Romanian is what we use in Merge Sort:
+  - We take 2 sorted arrays with n and m elements.
+  - We travel them at the same time.
+  - We select the value smaller from the two arrays.
+  - We add the value in a third array.
+  - We continue the travel in the array we took the element from.
+  - At the end the travel of one of them will be done.
+  - We take what's left and added to the third array.
+  - Third array's size is m + n.

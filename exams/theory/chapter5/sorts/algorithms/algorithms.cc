@@ -80,3 +80,36 @@ ArrayResult insertion_sort(const int src[], int n) {
 
   return result;
 }
+
+ArrayResult collating(const int src1[], const int src2[], int n, int m) {
+  // Copy the original raw arrays
+  int sorted1[n];
+  for (int i = 0; i < n; i++) {
+    sorted1[i] = src1[i];
+  }
+
+  int sorted2[m];
+  for (int i = 0; i < m; i++) {
+    sorted2[i] = src2[i];
+  }
+
+  ArrayResult result;
+  result.n = m + n;
+  int p = 0, i = 0, j = 0;
+
+  while (i < n && j < m) {
+    if (sorted1[i] < sorted2[j]) {
+      result.v[p++] = sorted1[i++];
+    } else {
+      result.v[p++] = sorted2[j++];
+    }
+  }
+  while (i < n) {
+    result.v[p++] = sorted1[i++];
+  }
+  while (j < m) {
+    result.v[p++] = sorted2[j++];
+  }
+
+  return result;
+}

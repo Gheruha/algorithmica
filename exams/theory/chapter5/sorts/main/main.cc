@@ -1,10 +1,11 @@
 #include "../algorithms/algorithms.h"
-#include <iostream>
 
 int main() {
-  int src[100] = {1, 43, 84, 2, 9, 19};
-  int n = 6;
+  int src1[4] = {4, 6, 12, 17};
+  int n = 4;
+  int src2[3] = {2, 6, 9};
+  int m = 3;
 
-  ArrayResult result = insertion_sort(src, n);
-  display(result, n);
+  ArrayResult result = collating(src1, src2, n, m);
+  display(result, m + n);
 }
