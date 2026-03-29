@@ -10,6 +10,7 @@ void display(ArrayResult result, int n);
 ArrayResult bubble_sort(const int src[], int n);
 ArrayResult selection_sort(const int src[], int n);
 ArrayResult insertion_sort(const int src[], int n);
-ArrayResult collating(const int src1[], const int src2[], int n, int m);
+ArrayResult merge(const int src1[], const int src2[], int n, int m);
+ArrayResult merge_sort(const int src[], int n);
 
 #endif

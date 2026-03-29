@@ -18,7 +18,7 @@ Inneficient sorting algorithms O(n^2):
   - at the end the whole array will be ordered.
 
 
-* Collating or 'Interclasare' in Romanian is what we use in Merge Sort:
+* Collating is what we use in Merge Sort:
   - We take 2 sorted arrays with n and m elements.
   - We travel them at the same time.
   - We select the value smaller from the two arrays.

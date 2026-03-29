@@ -81,35 +81,64 @@ ArrayResult insertion_sort(const int src[], int n) {
   return result;
 }
 
-ArrayResult collating(const int src1[], const int src2[], int n, int m) {
-  // Copy the original raw arrays
-  int sorted1[n];
-  for (int i = 0; i < n; i++) {
-    sorted1[i] = src1[i];
-  }
-
-  int sorted2[m];
-  for (int i = 0; i < m; i++) {
-    sorted2[i] = src2[i];
-  }
-
+ArrayResult merge(const int src1[], const int src2[], int n, int m) {
   ArrayResult result;
-  result.n = m + n;
-  int p = 0, i = 0, j = 0;
+  result.n = n + m;
+
+  int i = 0, j = 0, p = 0;
 
   while (i < n && j < m) {
-    if (sorted1[i] < sorted2[j]) {
-      result.v[p++] = sorted1[i++];
+    if (src1[i] < src2[j]) {
+      result.v[p++] = src1[i++];
     } else {
-      result.v[p++] = sorted2[j++];
+      result.v[p++] = src2[j++];
     }
   }
+
   while (i < n) {
-    result.v[p++] = sorted1[i++];
+    result.v[p++] = src1[i++];
   }
+
   while (j < m) {
-    result.v[p++] = sorted2[j++];
+    result.v[p++] = src2[j++];
   }
 
   return result;
+}
+
+ArrayResult merge_sort(const int src[], int n) {
+  // Base case
+  if (n <= 1) {
+    ArrayResult base;
+    base.n = n;
+    for (int i = 0; i < n; i++) {
+      base.v[i] = src[i];
+    }
+    return base;
+  }
+
+  int middle = n / 2;
+
+  ArrayResult leftArr;
+  leftArr.n = middle;
+
+  ArrayResult rightArr;
+  rightArr.n = n - middle;
+
+  // Copy left half
+  for (int i = 0; i < middle; i++) {
+    leftArr.v[i] = src[i];
+  }
+
+  // Copy right half
+  for (int j = 0; j < n - middle; j++) {
+    rightArr.v[j] = src[middle + j];
+  }
+
+  // Recursively sort both halves
+  ArrayResult sortedLeft = merge_sort(leftArr.v, leftArr.n);
+  ArrayResult sortedRight = merge_sort(rightArr.v, rightArr.n);
+
+  // Merge sorted halves
+  return merge(sortedLeft.v, sortedRight.v, sortedLeft.n, sortedRight.n);
 }
