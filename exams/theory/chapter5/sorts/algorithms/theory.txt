@@ -27,3 +27,12 @@ Inneficient sorting algorithms O(n^2):
   - At the end the travel of one of them will be done.
   - We take what's left and added to the third array.
   - Third array's size is m + n.
+
+
+* Counting Sort:
+	-	We create another array occurrences_array of size k + 1, where k is the maximum value in the original array (or max - min + 1 in the general case).
+	-	We count the occurrences of each value from the original array and store them in occurrences_array (the index represents the value).
+	-	For each value v, occurrences_array[v] stores how many times v appears in the original array.
+	-	Then, we transform occurrences_array into a prefix sum array by adding each element with the previous one; after this step, occurrences_array[v] represents the number of elements less than or equal to v, which corresponds to the final position of v in the sorted array.
+	-	We create a new array of size n to store the sorted result.
+	-	We traverse the original array (preferably from right to left for stability), and for each element x, we place it in the position occurrences_array[x] - 1 in the new array, then decrement occurrences_array[x].

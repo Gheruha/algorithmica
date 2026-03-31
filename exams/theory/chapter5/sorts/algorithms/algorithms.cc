@@ -142,3 +142,37 @@ ArrayResult merge_sort(const int src[], int n) {
   // Merge sorted halves
   return merge(sortedLeft.v, sortedRight.v, sortedLeft.n, sortedRight.n);
 }
+
+ArrayResult counting_sort(const int src[], int n) {
+  int k = -1;
+  for (int i = 0; i < n; i++) {
+    if (k < src[i]) {
+      k = src[i];
+    }
+  }
+
+  int occurrences[k + 1];
+  for (int i = 0; i <= k; i++) {
+    occurrences[i] = 0;
+  }
+
+  for (int i = 0; i < n; i++) {
+    occurrences[src[i]] += 1;
+  }
+
+  for (int i = 1; i <= k; i++) {
+    occurrences[i] += occurrences[i - 1];
+  }
+
+  ArrayResult result;
+  result.n = n;
+
+  for (int i = n - 1; i >= 0; i--) {
+    int value = src[i];
+    int position = occurrences[value] - 1;
+    result.v[position] = value;
+    occurrences[value]--;
+  }
+
+  return result;
+}
