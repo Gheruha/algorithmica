@@ -24,7 +24,8 @@ This repository is **not** intended for:
 | 2 | `chapter2/` | Determining common divisors; GCD & LCM; Euclid's Algorithm; Primality check; Prime factorization; Legendre's algorithm |
 | 3 | `chapter3/` | Convert from base 10 to base b; Convert from base b to base 10; Fast exponentiation |
 | 4 | `chapter4/` | Fibonacci numbers iterative; Fibonacci numbers recursive |
-| 5 | `chapter5/` | Bubble, Selection, Insertion, Merge & Counting sort; Insert & delete elements in raw arrays  |
+| 5 | `chapter5/` | Bubble, Selection, Insertion, Merge, Quick & Counting sort; Insert & delete elements in raw arrays  |
+| 10 | `chapter_10/` | Permutations; Combinations  |
 
 ## How to use this folder
 - Read the problem statement before opening a solution.
