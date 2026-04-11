@@ -13,5 +13,6 @@ ArrayResult insertion_sort(const int src[], int n);
 ArrayResult merge(const int src1[], const int src2[], int n, int m);
 ArrayResult merge_sort(const int src[], int n);
 ArrayResult counting_sort(const int src[], int n);
+ArrayResult quick_sort(const int src[], int n);
 
 #endif

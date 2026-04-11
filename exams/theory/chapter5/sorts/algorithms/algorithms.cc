@@ -176,3 +176,50 @@ ArrayResult counting_sort(const int src[], int n) {
 
   return result;
 }
+
+
+// QuickSort
+int partition(int v[], int start, int end) {
+  int pivot = v[end];
+  int i = start - 1;
+
+  for (int j = start; j < end; j++) {
+    if (v[j] < pivot) {
+      i++;
+      int aux = v[i];
+      v[i] = v[j];
+      v[j] = aux;
+    }
+  }
+
+  i++;
+  int aux = v[i];
+  v[i] = v[end];
+  v[end] = aux;
+
+  return i;
+}
+
+void quick_sort_recursive(int v[], int start, int end) {
+  if (start >= end)
+    return;
+
+  int p = partition(v, start, end);
+
+  quick_sort_recursive(v, start, p - 1);
+  quick_sort_recursive(v, p + 1, end);
+}
+
+ArrayResult quick_sort(const int src[], int n) {
+  // Copy of original raw array
+  ArrayResult result;
+  result.n = n;
+
+  for (int i = 0; i < n; i++) {
+    result.v[i] = src[i];
+  }
+
+  quick_sort_recursive(result.v, 0, n - 1);
+
+  return result;
+}
