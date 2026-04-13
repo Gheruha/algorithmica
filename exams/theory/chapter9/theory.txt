@@ -1,0 +1,4 @@
+Resource: https://www.pbinfo.ro/articole/10864/triunghiul-lui-pascal
+
+Pascal's triangle is a triangular array of natural numbers, in which each element on the sides of the triangle has the value 1, and the other elements are equal to the sum of the two neighboring elements, located on the line above.
+
