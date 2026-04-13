@@ -1,0 +1,9 @@
+* Problem
+    - Consider an array of numeric elements. In some problems we are asked to quickly determine the sum of the elements in some given sequences. 
+
+    Of course, one solution is to go through all the elements in the sequence and determine the sum, but this operation has complexity O(n), 
+    if the number of sums to be calculated is large the solution may be unacceptable.
+
+* Solution
+    - One auxiliar array(S) can help, each element of this array will contain the sum of A[i] + A[i-1].
+    - A[i] + A[i+1] + A[i+2] ... + A[j] = S[j] - S[i - 1].
