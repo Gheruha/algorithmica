@@ -1,0 +1,6 @@
+* Problem
+  - Given an array A with n integer elements. Determine a sequence for which the sum of the elements is maximum.
+  
+
+The problem is a classic one and admits various solutions. We will see three solutions below, of different complexity!
+Note, however, that if the elements were positive, then the required sequence would be the entire array.
