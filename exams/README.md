@@ -28,8 +28,8 @@ This repository is **not** intended for:
 | 9 | `chapter9/` | Pascal's Triangle  |
 | 10 | `chapter_10/` | Permutations; Combinations  |
 
-## How to use this folder
-- Read the problem statement before opening a solution.
+## How to use pbinfo/ folder
+- Read the problem statement before reading the solution.
 - Try solving the problem yourself first.
 - Use the code to compare approaches, not to copy blindly.
 - Pay attention to comments.
