@@ -1,3 +1,21 @@
-.DS_Store
+# Specific files
 bin
 algorithm
+
+# Bazel output 
+/bazel-*
+/bazel-bin
+/bazel-out
+/bazel-testlogs
+
+# Bazel local state
+/.bazelrc.user
+/.bazeliskrc
+
+# Build outputs
+/bin/
+/out/
+/build/
+
+# OS
+.DS_Store
